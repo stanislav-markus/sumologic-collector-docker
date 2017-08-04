@@ -8,7 +8,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update --quiet && \
  apt-get upgrade --quiet --force-yes -y && \
  apt-get install --quiet --force-yes -y wget && \
- wget -q -O /tmp/collector.deb https://collectors.sumologic.com/rest/download/deb/64 && \
+ wget -q -O /tmp/collector.deb https://nite-events.sumologic.net/rest/download/deb/64?version=19.170-27 && \
  dpkg -i /tmp/collector.deb && \
  rm /tmp/collector.deb && \
  apt-get remove --quiet --force-yes -y wget && \
